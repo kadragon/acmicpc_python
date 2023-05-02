@@ -1,3 +1,11 @@
-import sys
+scan_str: str = lambda: input()
+scan_int: int = lambda: int(input())
+scan_ints: list[int] = lambda: list(map(int, input().split()))
 
-scan: str = lambda: sys.stdin.readline().strip()
+
+def main():
+    pass
+
+
+if __name__ == "__main__":
+    main()

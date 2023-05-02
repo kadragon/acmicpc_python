@@ -68,15 +68,11 @@ class Parser:
         shutil.copy(self.src_path, self.dst_path)
 
         for i in range(len(self.example_input)):
-            with open(self.dst_path + f'input{i+1}.txt', 'w') as f:
+            with open(self.dst_path + f'_input{i+1}.txt', 'w') as f:
                 f.write(self.example_input[i])
 
-            with open(self.dst_path + f'output{i+1}.txt', 'w') as f:
+            with open(self.dst_path + f'_output{i+1}.txt', 'w') as f:
                 f.write(self.example_ouput[i])
-
-    def run(self):
-        subprocess.run(['code', '-r', self.dst_path, 'input1.txt'])
-        subprocess.run(['code', '-r', self.dst_path, 'main.py'])
 
 
 if __name__ == '__main__':
@@ -85,4 +81,3 @@ if __name__ == '__main__':
     parser.get_example()
     parser.make_dir()
     parser.make_file()
-    # parser.run()

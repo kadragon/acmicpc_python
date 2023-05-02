@@ -14,11 +14,11 @@ print("=========================================")
 i = 1
 while True:
     input_data, output_data = "", ""
-    if os.path.exists(dst_path + "input%d.txt" % (i)):
-        with open(dst_path + "input%d.txt" % (i), "r") as f:
+    if os.path.exists(dst_path + "_input%d.txt" % (i)):
+        with open(dst_path + "_input%d.txt" % (i), "r") as f:
             input_data = f.read()
 
-        with open(dst_path + "output%d.txt" % (i), "r") as f:
+        with open(dst_path + "_output%d.txt" % (i), "r") as f:
             output_data = f.read()
 
         result = subprocess.run(["python3", dst_path + "main.py"],

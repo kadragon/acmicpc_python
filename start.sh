@@ -30,5 +30,5 @@ fi
 python ./parser/main.py $1
 
 ## vscode --reuse-window
-code -r ./"$d"/"$e"/input1.txt
+code -r ./"$d"/"$e"/_input1.txt
 code -r ./"$d"/"$e"/main.py
